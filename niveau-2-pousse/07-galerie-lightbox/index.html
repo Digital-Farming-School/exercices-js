@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les récoltes de la saison — Ferme-école</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header class="entete">
+    <h1>Les récoltes de la saison</h1>
+    <p>Huit photos du jardin de la ferme-école. Cliquez sur une photo pour l'agrandir.</p>
+  </header>
+
+  <main>
+
+    <!-- ===== FILTRES : un bouton par catégorie. aria-pressed dit lequel est actif. ===== -->
+    <div class="filtres" role="group" aria-label="Filtrer les photos par catégorie">
+      <button class="filtre" type="button" data-filtre="tout" aria-pressed="true">Tout</button>
+      <button class="filtre" type="button" data-filtre="legume" aria-pressed="false">Légumes</button>
+      <button class="filtre" type="button" data-filtre="fruit" aria-pressed="false">Fruits</button>
+      <button class="filtre" type="button" data-filtre="cereale" aria-pressed="false">Céréales</button>
+      <button class="filtre" type="button" data-filtre="epice" aria-pressed="false">Épices</button>
+    </div>
+
+    <!-- Zone « live » : le lecteur d'écran annonce son contenu quand il change -->
+    <p class="compte" id="compte" aria-live="polite">8 photos affichées</p>
+
+    <!-- ===== GALERIE : chaque vignette est un <button> (focus et Entrée gratuits) ===== -->
+    <ul class="galerie">
+        <li data-categorie="legume">
+          <button class="vignette" type="button" data-legende="Tomates mûres cueillies le matin, avant la forte chaleur">
+            <img src="images/tomates.svg" alt="Un tas de tomates rouges" width="400" height="300">
+          </button>
+        </li>
+        <li data-categorie="legume">
+          <button class="vignette" type="button" data-legende="Courges orange et verte, récoltées quand la tige est sèche">
+            <img src="images/courges.svg" alt="Deux courges orange et une verte" width="400" height="300">
+          </button>
+        </li>
+        <li data-categorie="cereale">
+          <button class="vignette" type="button" data-legende="Épis de maïs encore dans leurs feuilles">
+            <img src="images/mais.svg" alt="Trois épis de maïs jaunes dans leurs feuilles" width="400" height="300">
+          </button>
+        </li>
+        <li data-categorie="epice">
+          <button class="vignette" type="button" data-legende="Piments rouges, cueillis à pleine maturité">
+            <img src="images/piments.svg" alt="Un groupe de piments rouges aux queues vertes" width="400" height="300">
+          </button>
+        </li>
+        <li data-categorie="legume">
+          <button class="vignette" type="button" data-legende="Aubergines violettes à la peau brillante">
+            <img src="images/aubergines.svg" alt="Deux aubergines violettes" width="400" height="300">
+          </button>
+        </li>
+        <li data-categorie="legume">
+          <button class="vignette" type="button" data-legende="Oignons rouges mis à sécher avant le stockage">
+            <img src="images/oignons.svg" alt="Un tas d'oignons rouges" width="400" height="300">
+          </button>
+        </li>
+        <li data-categorie="fruit">
+          <button class="vignette" type="button" data-legende="Mangues jaunes et rouges de l'arbre du fond du jardin">
+            <img src="images/mangues.svg" alt="Des mangues jaune et rouge" width="400" height="300">
+          </button>
+        </li>
+        <li data-categorie="legume">
+          <button class="vignette" type="button" data-legende="Gombos cueillis jeunes : au-delà de dix centimètres, ils deviennent filandreux">
+            <img src="images/gombos.svg" alt="Des gombos verts alignés" width="400" height="300">
+          </button>
+        </li>
+    </ul>
+
+  </main>
+
+  <!-- ===== VISIONNEUSE : <dialog> + showModal() = fenêtre modale native (focus piégé, fond, touche Échap) ===== -->
+  <dialog class="visionneuse" id="visionneuse" aria-label="Visionneuse de photos">
+    <div class="contenu">
+      <button class="fermer" type="button" aria-label="Fermer la visionneuse">×</button>
+      <figure>
+        <img id="grande-image" src="images/tomates.svg" alt="Un tas de tomates rouges" width="400" height="300">
+        <figcaption id="legende">Tomates mûres cueillies le matin, avant la forte chaleur</figcaption>
+      </figure>
+      <p class="position" id="position" aria-live="polite">1 / 8</p>
+      <button class="precedent" type="button" aria-label="Photo précédente">‹</button>
+      <button class="suivant" type="button" aria-label="Photo suivante">›</button>
+    </div>
+  </dialog>
+
+  <footer class="pied">
+    <p>Photos illustrées pour l'exercice — Exercice DFS, 2026</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "tomate",
+    "nom": "Tomate",
+    "nomLatin": "Solanum lycopersicum",
+    "famille": "Solanacées"
+    "categorie": "fruit",
+    "cycleMin": 90,
+    "cycleMax": 120,
+    "eau": "élevé",
+    "soleil": "plein soleil",
+    "semis": "En pépinière, repiquage à 4 ou 5 semaines.",
+    "conseil": "Arrosez au pied, régulièrement, sans mouiller les feuilles : cela limite les maladie    ,

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'herbier de la ferme-école</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header class="entete">
+    <p class="surtitre">Jardin pédagogique de la ferme-école</p>
+    <h1>L'herbier de la ferme-école</h1>
+    <p class="intro">
+      Quinze plantes cultivées au jardin. Les fiches ne sont pas écrites dans cette page :
+      elles sont <strong>chargées depuis un fichier</strong> (<code>data/plantes.json</code>).
+    </p>
+  </header>
+
+  <main>
+
+    <!-- ===== MESSAGE affiché par le script si la page est ouverte avec file:// ===== -->
+    <p id="alerte-fichier" class="alerte cache" role="alert">
+      Cette page est ouverte avec <strong>file://</strong> : le navigateur va refuser de lire le
+      fichier de données. Ouvrez-la avec <strong>Live Server</strong>
+      (clic droit sur <code>index.html</code> → <em>Open with Live Server</em>).
+    </p>
+
+    <!-- ===== LES OUTILS : désactivés tant que les données ne sont pas chargées ===== -->
+    <form class="barre-outils" role="search" aria-label="Rechercher une plante" id="formulaire-recherche">
+      <fieldset id="outils" disabled>
+        <legend class="cache-visuel">Outils de recherche</legend>
+
+        <div class="champ">
+          <label for="champ-recherche">Rechercher</label>
+          <input type="search" id="champ-recherche" placeholder="Nom, famille botanique…" autocomplete="off">
+        </div>
+
+        <div class="champ">
+          <label for="filtre-categorie">Catégorie</label>
+          <select id="filtre-categorie">
+            <option value="toutes">Toutes</option>
+            <option value="fruit">Légumes-fruits</option>
+            <option value="feuille">Légumes-feuilles</option>
+            <option value="racine">Racines, bulbes et rhizomes</option>
+            <option value="graine">Légumineuses et céréales</option>
+            <option value="aromatique">Plantes aromatiques</option>
+          </select>
+        </div>
+
+        <div class="champ">
+          <label for="choix-tri">Trier par</label>
+          <select id="choix-tri">
+            <option value="nom">Nom (A → Z)</option>
+            <option value="cycle-croissant">Cycle le plus court d'abord</option>
+            <option value="cycle-decroissant">Cycle le plus long d'abord</option>
+          </select>
+        </div>
+      </fieldset>
+    </form>
+
+    <!-- ===== ÉTAT DU CHARGEMENT : chargement, erreur ou aucun résultat ===== -->
+    <p id="statut" class="statut cache" aria-live="polite"></p>
+    <p><button type="button" class="bouton cache" id="bouton-reessayer">Réessayer</button></p>
+
+    <p id="compteur" class="compteur" aria-live="polite"></p>
+
+    <!-- ===== LES FICHES : créées par le script à partir du <template> ci-dessous ===== -->
+    <ul id="liste-plantes" class="grille-plantes"></ul>
+
+    <!-- Le contenu d'un <template> n'est jamais affiché : c'est un modèle à copier -->
+    <template id="modele-fiche">
+      <li class="fiche">
+        <img class="fiche-image" src="images/fruit.svg" alt="" width="400" height="200">
+        <div class="fiche-corps">
+          <h2 class="fiche-nom"></h2>
+          <p class="fiche-latin"></p>
+          <p><span class="badge fiche-categorie"></span></p>
+          <ul class="fiche-details">
+            <li class="fiche-cycle"></li>
+            <li class="fiche-eau"></li>
+            <li class="fiche-soleil"></li>
+            <li class="fiche-semis"></li>
+          </ul>
+          <p class="fiche-conseil"></p>
+        </div>
+      </li>
+    </template>
+
+  </main>
+
+  <footer class="pied">
+    <p>Exercice DFS — Ferme-école, 2026</p>
+  </footer>
+
+</body>
+</html>

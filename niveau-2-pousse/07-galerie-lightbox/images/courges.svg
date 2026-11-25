@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Deux courges orange et une verte</title>
+  <rect width="400" height="300" fill="#fff3e0"/>
+  <rect y="210" width="400" height="90" fill="#8d6e63"/>
+  <circle cx="130" cy="180" r="55" fill="#fb8c00"/>  <circle cx="250" cy="190" r="48" fill="#ef6c00"/>  <circle cx="320" cy="205" r="28" fill="#689f38"/>
+</svg>

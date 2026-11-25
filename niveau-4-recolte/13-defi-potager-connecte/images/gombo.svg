@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Gombo</title>
+  <rect width="400" height="300" fill="#f9fbe7"/>
+  <path d="M130 70 Q168 56 188 78 L222 240 Q210 268 196 244z" fill="#689f38"/><path d="M215 78 Q250 66 270 88 L296 236 Q286 262 272 240z" fill="#7cb342"/><path d="M150 76 L200 236 M165 70 L212 232 M236 84 L284 232 M250 80 L290 230" stroke="#33691e" stroke-width="3" opacity=".6"/><rect x="146" y="50" width="30" height="22" rx="6" fill="#33691e"/><rect x="232" y="58" width="30" height="22" rx="6" fill="#33691e"/>
+</svg>

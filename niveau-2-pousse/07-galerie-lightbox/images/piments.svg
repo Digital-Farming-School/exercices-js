@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Un groupe de piments rouges aux queues vertes</title>
+  <rect width="400" height="300" fill="#fce4ec"/>
+  <rect y="210" width="400" height="90" fill="#8d6e63"/>
+  <path d="M90 90 q40 90 -10 130 q-30 -60 10 -130z" fill="#d32f2f"/>
+  <rect x="88" y="76" width="8" height="18" fill="#2e7d32"/>
+  <path d="M150 90 q32 90 -16 130 q-30 -60 10 -130z" fill="#d32f2f"/>
+  <rect x="148" y="76" width="8" height="18" fill="#2e7d32"/>
+  <path d="M210 90 q24 90 -22 130 q-30 -60 10 -130z" fill="#d32f2f"/>
+  <rect x="208" y="76" width="8" height="18" fill="#2e7d32"/>
+  <path d="M270 90 q16 90 -28 130 q-30 -60 10 -130z" fill="#d32f2f"/>
+  <rect x="268" y="76" width="8" height="18" fill="#2e7d32"/>
+</svg>

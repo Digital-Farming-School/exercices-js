@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+  <title>Piment rouge</title>
+  <rect width="400" height="300" fill="#fff3c4"/>
+  <path d="M150 90 C 250 70, 330 130, 300 210 C 290 240, 260 250, 255 225 C 250 170, 200 140, 150 120 Z" fill="#c62828"/>
+  <path d="M170 98 C 220 95, 270 120, 280 170" fill="none" stroke="#ef5350" stroke-width="8" stroke-linecap="round"/>
+  <path d="M150 90 C 135 70, 120 70, 105 55" fill="none" stroke="#2e7d32" stroke-width="12" stroke-linecap="round"/>
+  <ellipse cx="148" cy="105" rx="18" ry="26" fill="#2e7d32" transform="rotate(-50 148 105)"/>
+</svg>

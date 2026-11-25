@@ -1,0 +1,225 @@
+/* =========================================================
+   La ferme-école en chiffres — feuille de style
+   Le CSS est FOURNI et complet : ne le modifiez pas.
+   Classes que votre JavaScript va ajouter / retirer :
+     .ouvert    panneau météo déplié
+     .visible   élément « apparait » qui est entré dans l'écran
+     .pulse     petite animation de rebond (@keyframes pulse)
+   Variable CSS posée par le JavaScript : --delai (retard de l'apparition)
+   ========================================================= */
+
+:root {
+  --vert: #2e7d32;
+  --vert-fonce: #1b5e20;
+  --vert-clair: #e8f5e9;
+  --soleil: #f9a825;
+  --creme: #fffaf0;
+  --texte: #1f2a1f;
+  --ombre: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --ombre-forte: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  line-height: 1.6;
+  color: var(--texte);
+  background-color: var(--creme);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: var(--vert-fonce);
+}
+
+/* ===== EN-TÊTE ===== */
+.entete {
+  padding: 2.5rem 1rem 2rem;
+  background-color: var(--vert-clair);
+  text-align: center;
+}
+
+.surtitre {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+}
+
+.intro {
+  max-width: 36rem;
+  margin: 0 auto 1.25rem;
+}
+
+.bouton-meteo {
+  padding: 0.7rem 1.2rem;
+  border: 0;
+  border-radius: 2rem;
+  background-color: var(--vert);
+  color: #fff;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bouton-meteo:hover {
+  background-color: var(--vert-fonce);
+}
+
+.bouton-meteo:focus-visible {
+  outline: 3px solid var(--soleil);
+  outline-offset: 3px;
+}
+
+/* ===== PANNEAU MÉTÉO : s'ouvre en douceur (transition) =====
+   Astuce : on anime grid-template-rows de 0fr à 1fr, ce qui fait grandir
+   le panneau jusqu'à sa vraie hauteur. */
+.meteo {
+  display: grid;
+  grid-template-rows: 0fr;
+  max-width: 28rem;
+  margin: 0 auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: grid-template-rows 0.4s ease, opacity 0.4s ease, visibility 0.4s;
+}
+
+.meteo.ouvert {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+}
+
+.meteo-contenu {
+  overflow: hidden;
+}
+
+.meteo-contenu > :first-child {
+  margin-top: 1rem;
+}
+
+/* ===== CONTENU ===== */
+main {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.bloc {
+  padding: 2.5rem 0 1rem;
+}
+
+.aide {
+  font-style: italic;
+}
+
+.chiffres,
+.cartes {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.chiffre,
+.carte {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: #fff;
+  box-shadow: var(--ombre);
+  transition: box-shadow 0.3s ease;
+}
+
+.chiffre {
+  text-align: center;
+  cursor: pointer;
+}
+
+.chiffre img {
+  border-radius: 0.5rem;
+}
+
+.nombre {
+  margin: 0.75rem 0 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--vert);
+  font-variant-numeric: tabular-nums;
+}
+
+.legende {
+  margin: 0;
+}
+
+.chiffre:hover,
+.carte:hover {
+  box-shadow: var(--ombre-forte);
+}
+
+.carte h3 {
+  margin-top: 0;
+}
+
+/* ===== APPARITION AU DÉFILEMENT =====
+   Les éléments « .apparait » sont cachés SEULEMENT si JavaScript est actif
+   (@media (scripting: enabled)) : sans JavaScript, tout reste visible. */
+@media (scripting: enabled) {
+  .apparait {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+    transition-delay: var(--delai, 0ms);
+  }
+
+  .apparait.visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ===== ANIMATION « PULSE » (déclenchée par JavaScript) ===== */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 0.5s ease;
+}
+
+.pied {
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+  background-color: var(--vert-clair);
+  text-align: center;
+}
+
+/* ===== MOUVEMENT RÉDUIT : le CSS coupe ses propres transitions ===== */
+@media (prefers-reduced-motion: reduce) {
+  .meteo,
+  .apparait {
+    transition: none;
+  }
+}

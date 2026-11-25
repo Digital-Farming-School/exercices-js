@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Des graines déposées dans un sillon, avec deux jeunes pousses</title>
+  <rect width="400" height="300" fill="#e8f5e9"/>
+  <circle cx="70" cy="60" r="30" fill="#f9a825"/>  <rect y="210" width="400" height="90" fill="#795548"/>
+  <rect x="30" y="236" width="340" height="14" rx="7" fill="#4e342e"/>
+  <circle cx="60" cy="243" r="5" fill="#fff3c4"/>
+  <circle cx="100" cy="243" r="5" fill="#fff3c4"/>
+  <circle cx="140" cy="243" r="5" fill="#fff3c4"/>
+  <circle cx="180" cy="243" r="5" fill="#fff3c4"/>
+  <rect x="247" y="200" width="6" height="36" fill="#2e7d32"/>
+  <ellipse cx="236" cy="208" rx="14" ry="7" fill="#388e3c" transform="rotate(-25 236 208)"/>
+  <ellipse cx="264" cy="214" rx="14" ry="7" fill="#388e3c" transform="rotate(25 264 214)"/>
+  <rect x="317" y="208" width="6" height="28" fill="#2e7d32"/>
+  <ellipse cx="306" cy="216" rx="14" ry="7" fill="#388e3c" transform="rotate(-25 306 216)"/>
+  <ellipse cx="334" cy="222" rx="14" ry="7" fill="#388e3c" transform="rotate(25 334 222)"/>
+</svg>

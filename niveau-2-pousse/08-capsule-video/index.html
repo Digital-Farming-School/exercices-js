@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planter une bouture — Capsule vidéo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header class="entete">
+    <p class="surtitre">Capsule vidéo · ferme-école</p>
+    <h1>Planter une bouture</h1>
+  </header>
+
+  <main>
+
+    <section class="lecteur" aria-label="Lecteur vidéo">
+
+      <figure class="cadre">
+        <!-- L'attribut « controls » garde le lecteur utilisable SANS JavaScript.
+             Votre script le retirera pour mettre à la place ses propres commandes. -->
+        <video id="capsule" controls preload="metadata" poster="images/poster.svg" playsinline width="480" height="270">
+          <source src="videos/bouture.mp4" type="video/mp4">
+          <source src="videos/bouture.webm" type="video/webm">
+          <track kind="subtitles" src="videos/bouture.fr.vtt" srclang="fr" label="Français">
+          <p>Votre navigateur ne sait pas lire cette vidéo. <a href="videos/bouture.mp4">Télécharger la capsule (MP4)</a>.</p>
+        </video>
+        <!-- Commandes personnalisées : cachées au départ, c'est le JavaScript qui les montre -->
+        <div class="commandes" id="commandes" hidden>
+          <button class="bouton" id="bouton-lecture" type="button">▶ Lecture</button>
+
+          <input class="progression" id="progression" type="range" min="0" max="100" step="0.1" value="0" aria-label="Position dans la vidéo">
+          <output class="temps" id="temps" for="progression">0:00 / 0:00</output>
+
+          <button class="bouton" id="bouton-muet" type="button" aria-pressed="false">🔊 Son</button>
+          <input class="volume" id="volume" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume">
+
+          <label class="vitesse">
+            Vitesse
+            <select id="vitesse">
+              <option value="0.5">0,5×</option>
+              <option value="1" selected>1×</option>
+              <option value="1.5">1,5×</option>
+              <option value="2">2×</option>
+            </select>
+          </label>
+
+          <button class="bouton" id="bouton-soustitres" type="button" aria-pressed="false">Sous-titres</button>
+        </div>
+
+        <figcaption>Trois gestes pour réussir une bouture de manioc ou de patate douce. Vidéo d'illustration.</figcaption>
+      </figure>
+
+      <!-- Zone « live » : message sur la durée de la capsule -->
+      <p class="verdict" id="verdict" aria-live="polite"></p>
+    </section>
+
+    <section aria-labelledby="titre-chapitres">
+      <h2 id="titre-chapitres">Chapitres</h2>
+      <ol class="chapitres">
+        <li><button type="button" data-temps="0">Choisir la tige <span>0:00</span></button></li>
+        <li><button type="button" data-temps="4">Couper sous un nœud <span>0:04</span></button></li>
+        <li><button type="button" data-temps="8">Planter dans le sable <span>0:08</span></button></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <p>Capsule générée pour l'exercice — Exercice DFS, 2026</p>
+  </footer>
+
+</body>
+</html>

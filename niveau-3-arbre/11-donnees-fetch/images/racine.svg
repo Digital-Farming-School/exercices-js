@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img">
+  <title>Racine, bulbe ou rhizome</title>
+  <rect width="400" height="200" fill="#fff3e0"/>
+  <path d="M130 50 H 270 C 270 110 225 170 200 180 C 175 170 130 110 130 50 Z" fill="#fb8c00"/>
+  <path d="M150 80 H 190 M215 100 H 255 M170 125 H 205" stroke="#e65100" stroke-width="5" stroke-linecap="round"/>
+  <path d="M165 50 C150 25 160 15 168 8 M200 50 C200 25 205 15 200 6 M235 50 C250 25 240 15 232 8" fill="none" stroke="#2e7d32" stroke-width="9" stroke-linecap="round"/>
+</svg>

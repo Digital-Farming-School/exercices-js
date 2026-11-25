@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Quatre feuilles de formes différentes</title>
+  <rect width="400" height="300" fill="#f1f8e9"/>
+  <path d="M100 110 q40 -60 90 0 q-40 60 -90 0z" fill="#2e7d32" transform="rotate(0 100 110)"/>
+  <path d="M200 190 q40 -60 90 0 q-40 60 -90 0z" fill="#66bb6a" transform="rotate(40 200 190)"/>
+  <path d="M300 110 q40 -60 90 0 q-40 60 -90 0z" fill="#1b5e20" transform="rotate(80 300 110)"/>
+  <path d="M230 80 q40 -60 90 0 q-40 60 -90 0z" fill="#9ccc65" transform="rotate(-40 230 80)"/>
+</svg>

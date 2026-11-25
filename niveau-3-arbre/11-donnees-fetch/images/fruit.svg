@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img">
+  <title>Légume-fruit</title>
+  <rect width="400" height="200" fill="#ffe9e0"/>
+  <circle cx="200" cy="112" r="62" fill="#e53935"/>
+  <path d="M170 62 C185 75 215 75 230 62 C220 82 180 82 170 62 Z" fill="#2e7d32"/>
+  <path d="M200 52 V 36" stroke="#2e7d32" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="178" cy="98" rx="10" ry="16" fill="#ef9a9a" transform="rotate(25 178 98)"/>
+</svg>

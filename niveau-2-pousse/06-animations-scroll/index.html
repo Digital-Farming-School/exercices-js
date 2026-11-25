@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La ferme-école en chiffres</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header class="entete">
+    <p class="surtitre">Jardin pédagogique</p>
+    <h1>La ferme-école en chiffres</h1>
+    <p class="intro">Faites défiler la page : les chiffres et les cartes apparaissent au fur et à mesure.</p>
+
+    <!-- Bouton qui montre / cache le panneau météo. aria-controls désigne le panneau commandé. -->
+    <button class="bouton-meteo" type="button" aria-expanded="false" aria-controls="meteo">
+      Afficher la météo du jardin
+    </button>
+    <div class="meteo" id="meteo">
+      <div class="meteo-contenu">
+        <p><strong>Aujourd'hui :</strong> 28 °C, ciel dégagé le matin.</p>
+        <p>Risque d'averse en fin de journée : arrosez tôt, pas besoin le soir.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== LES CHIFFRES-CLÉS : le nombre est écrit dans le HTML (valeur finale) ===== -->
+    <section class="bloc" aria-labelledby="titre-chiffres">
+      <h2 id="titre-chiffres">Nos chiffres-clés</h2>
+      <p class="aide">Cliquez sur un chiffre pour le faire « pulser ».</p>
+
+      <div class="chiffres">
+        <article class="chiffre apparait">
+          <img src="images/apprenants.svg" alt="Trois silhouettes d'apprenants devant un jardin" width="400" height="300">
+          <p class="nombre" data-cible="120">120</p>
+          <p class="legende">apprenants accueillis chaque année</p>
+        </article>
+        <article class="chiffre apparait">
+          <img src="images/varietes.svg" alt="Quatre feuilles de formes différentes" width="400" height="300">
+          <p class="nombre" data-cible="35">35</p>
+          <p class="legende">variétés de légumes et d'herbes</p>
+        </article>
+        <article class="chiffre apparait">
+          <img src="images/parcelle.svg" alt="Vue du dessus de parcelles de culture en damier" width="400" height="300">
+          <p class="nombre" data-cible="2400">2 400</p>
+          <p class="legende">m² de parcelles cultivées</p>
+        </article>
+        <article class="chiffre apparait">
+          <img src="images/eau.svg" alt="Une grosse goutte d'eau et une citerne de récupération" width="400" height="300">
+          <p class="nombre" data-cible="18000">18 000</p>
+          <p class="legende">litres d'eau de pluie récupérés</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== LES CARTES : elles apparaissent l'une après l'autre ===== -->
+    <section class="bloc" aria-labelledby="titre-cartes">
+      <h2 id="titre-cartes">Ce que l'on apprend ici</h2>
+
+      <div class="cartes">
+        <article class="carte apparait">
+          <h3>Préparer le sol</h3>
+          <p>Bêcher, amender avec du compost et reconnaître un sol vivant.</p>
+        </article>
+        <article class="carte apparait">
+          <h3>Semer et repiquer</h3>
+          <p>Choisir la bonne profondeur, le bon écartement, la bonne saison.</p>
+        </article>
+        <article class="carte apparait">
+          <h3>Économiser l'eau</h3>
+          <p>Récupérer la pluie, pailler, arroser au pied et au bon moment.</p>
+        </article>
+        <article class="carte apparait">
+          <h3>Soigner sans chimie</h3>
+          <p>Associer les cultures, observer les insectes et préparer des répulsifs naturels.</p>
+        </article>
+        <article class="carte apparait">
+          <h3>Récolter et conserver</h3>
+          <p>Cueillir à maturité, sécher, trier et stocker sans perdre la récolte.</p>
+        </article>
+        <article class="carte apparait">
+          <h3>Vendre au marché</h3>
+          <p>Peser, présenter, fixer un prix juste et tenir un petit carnet de comptes.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <p>Chiffres fictifs, pour l'exercice — Exercice DFS, 2026</p>
+  </footer>
+
+</body>
+</html>

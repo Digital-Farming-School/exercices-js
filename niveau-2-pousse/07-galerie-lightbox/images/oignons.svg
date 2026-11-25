@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Un tas d'oignons rouges</title>
+  <rect width="400" height="300" fill="#f3e5f5"/>
+  <rect y="210" width="400" height="90" fill="#8d6e63"/>
+  <circle cx="120" cy="190" r="36" fill="#ab47bc"/>
+  <path d="M120 154 v-22" stroke="#d1c4e9" stroke-width="5"/>
+  <circle cx="190" cy="185" r="36" fill="#ab47bc"/>
+  <path d="M190 149 v-22" stroke="#d1c4e9" stroke-width="5"/>
+  <circle cx="260" cy="190" r="36" fill="#ab47bc"/>
+  <path d="M260 154 v-22" stroke="#d1c4e9" stroke-width="5"/>
+  <circle cx="155" cy="140" r="36" fill="#ab47bc"/>
+  <path d="M155 104 v-22" stroke="#d1c4e9" stroke-width="5"/>
+  <circle cx="225" cy="135" r="36" fill="#ab47bc"/>
+  <path d="M225 99 v-22" stroke="#d1c4e9" stroke-width="5"/>
+</svg>

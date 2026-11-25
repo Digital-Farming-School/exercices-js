@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Haricot vert</title>
+  <rect width="400" height="300" fill="#f1f8e9"/>
+  <path d="M70 85 C150 55 240 140 330 105" stroke="#43a047" stroke-width="26" fill="none" stroke-linecap="round"/><path d="M70 150 C150 120 240 205 330 170" stroke="#43a047" stroke-width="26" fill="none" stroke-linecap="round"/><path d="M70 215 C150 185 240 270 330 235" stroke="#43a047" stroke-width="26" fill="none" stroke-linecap="round"/><path d="M70 85 C150 55 240 140 330 105 M70 150 C150 120 240 205 330 170 M70 215 C150 185 240 270 330 235" stroke="#a5d6a7" stroke-width="5" fill="none" stroke-linecap="round" opacity=".8"/>
+</svg>

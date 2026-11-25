@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le potager connecté — Ferme-école</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+  <!-- US8 : barre de progression de lecture (le script règle sa largeur, de 0 % à 100 %) -->
+  <div class="progression" aria-hidden="true">
+    <div class="progression-barre" id="barre-lecture"></div>
+  </div>
+
+  <!-- ===== EN-TÊTE ET MENU ===== -->
+  <header class="entete" id="haut">
+    <div class="entete-contenu">
+      <a class="marque" href="index.html">
+        <img src="images/logo.svg" alt="" width="40" height="40">
+        <span>Le potager connecté</span>
+      </a>
+
+      <!-- US1 : les liens reçoivent la classe « actif » selon la section visible ; sur téléphone, le burger ajoute la classe « ouvert » -->
+      <nav class="menu" id="menu" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#plantes">Les plantes</a></li>
+          <li><a href="#conseils">Conseils</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="outils-entete">
+        <!-- US6 : nombre de plantes favorites -->
+        <span class="pastille-favoris"><span aria-hidden="true">♥</span> <span id="nb-favoris">0</span><span class="sr-only"> plante(s) en favori</span></span>
+        <!-- US7 : mode sombre (aria-pressed = true quand le mode sombre est actif) -->
+        <button class="bouton-icone" id="bouton-theme" type="button" aria-pressed="false">
+          <span id="icone-theme" aria-hidden="true">☾</span>
+          <span class="sr-only">Mode sombre</span>
+        </button>
+        <button class="bouton-icone burger" id="burger" type="button" aria-expanded="false" aria-controls="menu">
+          <span class="burger-traits" aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- ===== ACCUEIL ===== -->
+    <section class="hero" id="accueil">
+      <div class="hero-texte">
+        <p class="surtitre">Ferme-école · potager pédagogique</p>
+        <h1>Le potager connecté</h1>
+        <p>
+          Douze légumes cultivés par les apprenants de la ferme-école : quand les semer,
+          combien d'eau leur donner, combien de temps attendre avant la récolte.
+          Cherchez, filtrez, mettez vos préférés de côté !
+        </p>
+        <a class="bouton" href="#plantes">Découvrir les plantes</a>
+      </div>
+      <img class="hero-image" src="images/potager.svg" alt="Quatre rangs de légumes verts, certains portant des fruits rouges et orange, sous un soleil jaune" width="800" height="400">
+    </section>
+
+    <!-- US8 : proposition de reprise de lecture (cachée par défaut, le script la montre) -->
+    <div class="reprise cache" id="reprise" role="status">
+      <p>Vous aviez lu <strong id="reprise-pct">0</strong> % de la page.</p>
+      <button class="bouton bouton-petit" id="reprise-bouton" type="button">Reprendre la lecture</button>
+      <button class="bouton-icone bouton-fermer" id="reprise-fermer" type="button" aria-label="Fermer ce message">×</button>
+    </div>
+
+    <!-- ===== LES PLANTES (fiches générées depuis data/potager.json) ===== -->
+    <section class="plantes" id="plantes" aria-labelledby="titre-plantes">
+      <h2 id="titre-plantes">Les plantes du potager</h2>
+
+      <!-- US3 : recherche, filtre par saison, tri, favoris seulement -->
+      <form class="filtres" id="filtres" role="search" aria-label="Filtrer les plantes">
+        <div class="champ">
+          <label for="recherche">Rechercher</label>
+          <input type="search" id="recherche" name="recherche" placeholder="tomate, solanacées…" autocomplete="off">
+        </div>
+        <div class="champ">
+          <label for="filtre-saison">Saison de semis</label>
+          <select id="filtre-saison" name="saison">
+            <option value="toutes">Toutes les saisons</option>
+            <option value="printemps">Printemps</option>
+            <option value="été">Été</option>
+            <option value="automne">Automne</option>
+            <option value="hiver">Hiver</option>
+          </select>
+        </div>
+        <div class="champ">
+          <label for="tri">Trier par</label>
+          <select id="tri" name="tri">
+            <option value="nom">Nom (A → Z)</option>
+            <option value="jours-asc">Récolte la plus rapide</option>
+            <option value="jours-desc">Récolte la plus longue</option>
+          </select>
+        </div>
+        <div class="champ champ-case">
+          <input type="checkbox" id="filtre-favoris" name="favoris">
+          <label for="filtre-favoris">Favoris seulement</label>
+        </div>
+        <button class="bouton bouton-secondaire" id="reinitialiser" type="reset">Réinitialiser</button>
+      </form>
+
+      <!-- US3 : nombre de résultats, annoncé aux lecteurs d'écran (aria-live) -->
+      <p class="compteur" id="compteur" role="status" aria-live="polite"></p>
+
+      <!-- US2 : trois états — chargement, erreur, résultats -->
+      <p class="etat etat-chargement" id="etat-chargement">Chargement des fiches…</p>
+      <div class="etat etat-erreur cache" id="etat-erreur" role="alert">
+        <p>Impossible de charger les fiches des plantes.</p>
+        <button class="bouton" id="reessayer" type="button">Réessayer</button>
+      </div>
+      <p class="etat cache" id="aucun-resultat">Aucune plante ne correspond à votre recherche.</p>
+
+      <ul class="grille-fiches" id="liste-plantes"></ul>
+    </section>
+
+    <!-- US2 : modèle d'une fiche (à cloner avec cloneNode) -->
+    <template id="modele-fiche">
+      <li class="fiche">
+        <figure class="fiche-image">
+          <button class="fiche-agrandir" type="button">
+            <img src="" alt="" width="400" height="300" loading="lazy">
+          </button>
+        </figure>
+        <div class="fiche-corps">
+          <h3 class="fiche-titre"></h3>
+          <p class="fiche-famille"></p>
+          <p class="fiche-description"></p>
+          <ul class="fiche-infos">
+            <li><span class="info-nom">Semis :</span> <span data-info="saisons"></span></li>
+            <li><span class="info-nom">Exposition :</span> <span data-info="exposition"></span></li>
+            <li><span class="info-nom">Arrosage :</span> <span data-info="arrosage"></span></li>
+            <li><span class="info-nom">Du semis à la récolte :</span> <span data-info="jours"></span></li>
+          </ul>
+        </div>
+        <button class="favori" type="button" aria-pressed="false">
+          <span aria-hidden="true">♥</span>
+        </button>
+      </li>
+    </template>
+
+    <!-- ===== CONSEILS (contenu statique : il apparaît aussi au défilement, US4) ===== -->
+    <section class="conseils" id="conseils" aria-labelledby="titre-conseils">
+      <h2 id="titre-conseils">Trois gestes simples</h2>
+      <div class="conseils-grille">
+        <article class="conseil" data-revele>
+          <h3>Arroser tôt le matin</h3>
+          <p>L'eau s'évapore moins et les feuilles sèchent avant la nuit, ce qui limite les maladies.</p>
+        </article>
+        <article class="conseil" data-revele>
+          <h3>Pailler le sol</h3>
+          <p>Une couche de paille ou de feuilles mortes garde l'humidité et freine les mauvaises herbes.</p>
+        </article>
+        <article class="conseil" data-revele>
+          <h3>Faire tourner les cultures</h3>
+          <p>Ne replantez pas la même famille au même endroit deux ans de suite : le sol et les plantes se fatiguent moins.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- US5 : visionneuse d'images -->
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-legende">
+    <div class="lightbox-contenu">
+      <button class="bouton-icone lightbox-fermer" id="lightbox-fermer" type="button" aria-label="Fermer la visionneuse">×</button>
+      <button class="bouton-icone lightbox-nav lightbox-precedent" id="lightbox-precedent" type="button" aria-label="Plante précédente">‹</button>
+      <figure>
+        <img id="lightbox-image" src="" alt="" width="400" height="300">
+        <figcaption id="lightbox-legende"></figcaption>
+      </figure>
+      <button class="bouton-icone lightbox-nav lightbox-suivant" id="lightbox-suivant" type="button" aria-label="Plante suivante">›</button>
+    </div>
+  </dialog>
+
+  <!-- US10 : retour en haut (visible après 600 px de défilement) -->
+  <button class="retour-haut" id="retour-haut" type="button" aria-label="Retour en haut de la page">↑</button>
+
+  <footer class="pied">
+    <p>Le potager connecté — Ferme-école, exercice DFS 2026.</p>
+    <p><a href="pages/contact.html">Une question ? Écrivez-nous</a></p>
+  </footer>
+
+</body>
+</html>

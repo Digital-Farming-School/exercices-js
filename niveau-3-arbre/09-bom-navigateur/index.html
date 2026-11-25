@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord du visiteur — Ferme-école</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header class="entete">
+    <p class="surtitre">Visite de la ferme-école</p>
+    <h1>Tableau de bord du visiteur</h1>
+    <p class="intro">
+      Votre navigateur sait beaucoup de choses : la taille de votre écran, votre langue,
+      l'adresse de la page, l'état de la connexion… Cette page les affiche en direct.
+    </p>
+  </header>
+
+  <main>
+
+    <!-- ===== LES TROIS CARTES D'INFORMATIONS : chaque <dd> a un id que le script remplit ===== -->
+    <section class="grille" aria-label="Informations sur votre visite">
+
+      <article class="carte" id="carte-ecran">
+        <h2>Votre écran</h2>
+        <dl>
+          <dt>Largeur de la fenêtre</dt>
+          <dd><span id="fenetre-largeur">…</span> px</dd>
+          <dt>Hauteur de la fenêtre</dt>
+          <dd><span id="fenetre-hauteur">…</span> px</dd>
+          <dt>Taille de l'écran</dt>
+          <dd id="ecran-taille">…</dd>
+          <dt>Densité de pixels</dt>
+          <dd id="ecran-densite">…</dd>
+        </dl>
+      </article>
+
+      <article class="carte" id="carte-navigateur">
+        <h2>Votre navigateur</h2>
+        <dl>
+          <dt>Langue</dt>
+          <dd id="langue">…</dd>
+          <dt>Connexion</dt>
+          <dd><span id="etat-connexion" class="badge">…</span></dd>
+          <dt>Thème préféré</dt>
+          <dd id="theme-prefere">…</dd>
+          <dt>Identité déclarée (<code>userAgent</code>)</dt>
+          <dd id="agent">…</dd>
+        </dl>
+      </article>
+
+      <article class="carte" id="carte-adresse">
+        <h2>L'adresse de la page</h2>
+        <dl>
+          <dt>Adresse complète</dt>
+          <dd id="adresse-complete">…</dd>
+          <dt>Protocole</dt>
+          <dd id="adresse-protocole">…</dd>
+          <dt>Nom d'hôte</dt>
+          <dd id="adresse-hote">…</dd>
+          <dt>Ancre (<code>#…</code>)</dt>
+          <dd id="adresse-hash">…</dd>
+          <dt>Paramètres (<code>?…</code>)</dt>
+          <dd id="adresse-recherche">…</dd>
+        </dl>
+        <p id="alerte-protocole" class="alerte cache" role="status">
+          Vous ouvrez la page avec <strong>file://</strong> : certaines fonctions du navigateur
+          sont limitées. Utilisez Live Server (<strong>http://</strong>).
+        </p>
+      </article>
+
+    </section>
+
+    <!-- ===== LA PLANTE CHOISIE : lue dans l'adresse (?plante=piment) ===== -->
+    <section class="carte" id="fiche-plante" aria-labelledby="titre-fiche">
+      <h2 id="titre-fiche">Une plante dans l'adresse</h2>
+      <p>
+        Le nom de la plante est lu dans l'adresse de la page :
+        <code>index.html?plante=piment</code>. Changez-le avec les boutons, puis utilisez
+        les flèches de l'historique.
+      </p>
+
+      <div class="rangee" role="group" aria-label="Choisir une plante">
+        <button type="button" class="bouton bouton-clair" data-plante="piment">Piment</button>
+        <button type="button" class="bouton bouton-clair" data-plante="gingembre">Gingembre</button>
+        <button type="button" class="bouton bouton-clair" data-plante="basilic">Basilic</button>
+      </div>
+
+      <div class="plante" aria-live="polite">
+        <img id="plante-image" class="cache" src="images/piment.svg" alt="" width="400" height="300">
+        <div>
+          <h3 id="plante-titre">Aucune plante choisie</h3>
+          <p id="plante-texte">Choisissez une plante avec les boutons ci-dessus.</p>
+        </div>
+      </div>
+
+      <div class="rangee">
+        <button type="button" class="bouton" id="bouton-precedent">← Page précédente</button>
+        <button type="button" class="bouton" id="bouton-suivant">Page suivante →</button>
+      </div>
+    </section>
+
+    <!-- ===== LE MINUTEUR D'ARROSAGE ===== -->
+    <section class="carte minuteur" id="minuteur" aria-labelledby="titre-minuteur">
+      <h2 id="titre-minuteur">Minuteur d'arrosage</h2>
+      <p>
+        Une planche de piments reçoit son eau goutte à goutte. Ici, le minuteur est réglé
+        sur <strong>30 secondes</strong> pour tester (dans la vraie vie : 20 minutes).
+      </p>
+      <p class="chrono" id="minuteur-affichage" role="timer">00:30</p>
+      <div class="rangee">
+        <button type="button" class="bouton" id="minuteur-demarrer">Démarrer</button>
+        <button type="button" class="bouton bouton-clair" id="minuteur-pause">Pause</button>
+        <button type="button" class="bouton bouton-clair" id="minuteur-reinitialiser">Remettre à zéro</button>
+      </div>
+      <p id="minuteur-message" aria-live="polite"></p>
+    </section>
+
+    <!-- ===== PARTAGER LA PAGE ===== -->
+    <section class="carte" id="partage" aria-labelledby="titre-partage">
+      <h2 id="titre-partage">Partager cette page</h2>
+      <button type="button" class="bouton" id="bouton-copier">Copier l'adresse</button>
+      <p id="copie-message" aria-live="polite"></p>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <p>Exercice DFS — Ferme-école, 2026</p>
+    <p><a href="#carte-ecran">↑ Retour aux informations</a></p>
+  </footer>
+
+</body>
+</html>

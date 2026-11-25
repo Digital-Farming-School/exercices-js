@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Un arrosoir verse de l'eau sur un jeune plant</title>
+  <rect width="400" height="300" fill="#e0f7fa"/>
+  <circle cx="340" cy="50" r="30" fill="#f9a825"/>  <rect y="210" width="400" height="90" fill="#6d4c41"/>  <rect x="247" y="155" width="6" height="60" fill="#2e7d32"/>
+  <ellipse cx="236" cy="163" rx="14" ry="7" fill="#388e3c" transform="rotate(-25 236 163)"/>
+  <ellipse cx="264" cy="169" rx="14" ry="7" fill="#388e3c" transform="rotate(25 264 169)"/>
+  <rect x="70" y="80" width="90" height="60" rx="10" fill="#1976d2"/>
+  <path d="M160 100 L215 70 L220 80 L160 125 z" fill="#1565c0"/>
+  <path d="M75 85 q-35 20 -5 50" stroke="#1565c0" stroke-width="8" fill="none"/>
+  <path d="M225 100 q5 10 0 14 q-5 -4 0 -14z" fill="#4fc3f7"/>
+  <path d="M235 125 q5 10 0 14 q-5 -4 0 -14z" fill="#4fc3f7"/>
+  <path d="M245 105 q5 10 0 14 q-5 -4 0 -14z" fill="#4fc3f7"/>
+  <path d="M255 135 q5 10 0 14 q-5 -4 0 -14z" fill="#4fc3f7"/>
+  <path d="M265 115 q5 10 0 14 q-5 -4 0 -14z" fill="#4fc3f7"/>
+</svg>

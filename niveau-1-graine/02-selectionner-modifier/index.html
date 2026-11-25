@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche plante n° 12 — La tomate</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE : le titre et la pastille d'état seront modifiés par le script ===== -->
+  <header class="entete">
+    <p class="surtitre">Fiche plante n° 12</p>
+    <h1 id="titre-fiche">La tomate</h1>
+    <p class="sous-titre">Solanum lycopersicum</p>
+    <!-- data-etat et data-jours : des données que le script peut lire et écrire -->
+    <span class="pastille" id="pastille-etat" data-etat="en-croissance" data-jours="5">En croissance</span>
+  </header>
+
+  <main>
+    <article class="fiche" id="fiche">
+
+      <img id="photo-plante" src="images/tomate.svg" alt="tomate" width="400" height="300">
+
+      <p class="resume">
+        La tomate est le légume-fruit préféré du potager. Elle aime la chaleur, le soleil
+        et un sol riche en matière organique.
+      </p>
+
+      <h2>Caractéristiques</h2>
+      <ul class="caracteristiques">
+        <li><strong>Famille :</strong> Solanacées</li>
+        <li><strong>Semis :</strong> en pépinière, 6 à 8 semaines avant le repiquage</li>
+        <li><strong>Exposition :</strong> plein soleil</li>
+        <li><strong>Arrosage :</strong> régulier, au pied, sans mouiller les feuilles</li>
+        <li><strong>Récolte :</strong> 70 à 90 jours après le repiquage</li>
+      </ul>
+      <p class="note" id="nb-caracteristiques">Nombre de caractéristiques : à calculer.</p>
+
+      <!-- Masqué au départ par la classe « cache » : le script la retirera -->
+      <div class="alerte cache" id="conseil">
+        <strong>Conseil :</strong> supprimez régulièrement les gourmands (les petites
+        pousses entre la tige et les branches) pour que les fruits grossissent mieux.
+      </div>
+
+      <p><a id="lien-source" href="https://fr.wikipedia.org/wiki/Tomate">En savoir plus sur la tomate</a></p>
+
+    </article>
+  </main>
+
+  <footer class="pied">
+    <p>Exercice DFS — JavaScript, sprint 1</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img">
+  <title>Plante aromatique</title>
+  <rect width="400" height="200" fill="#e0f7fa"/>
+  <path d="M200 185 V 85" stroke="#2e7d32" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="160" cy="100" rx="38" ry="20" fill="#43a047" transform="rotate(-30 160 100)"/>
+  <ellipse cx="242" cy="100" rx="38" ry="20" fill="#388e3c" transform="rotate(30 242 100)"/>
+  <ellipse cx="200" cy="60" rx="22" ry="36" fill="#66bb6a"/>
+  <ellipse cx="158" cy="150" rx="32" ry="16" fill="#2e7d32" transform="rotate(-20 158 150)"/>
+  <ellipse cx="244" cy="150" rx="32" ry="16" fill="#2e7d32" transform="rotate(20 244 150)"/>
+</svg>

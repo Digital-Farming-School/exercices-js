@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Chou</title>
+  <rect width="400" height="300" fill="#e0f2f1"/>
+  <ellipse cx="200" cy="170" rx="130" ry="95" fill="#388e3c"/><circle cx="200" cy="165" r="88" fill="#66bb6a"/><path d="M200 78 C168 135 168 200 200 252 M200 78 C232 135 232 200 200 252 M112 165 C150 150 250 150 288 165" stroke="#c8e6c9" stroke-width="4" fill="none"/><circle cx="200" cy="165" r="26" fill="#a5d6a7" opacity=".6"/>
+</svg>

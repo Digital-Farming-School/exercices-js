@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le marché de la ferme-école — Commande</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+
+  <header class="entete">
+    <img class="logo" src="images/marche.svg" alt="Étal de marché avec un auvent vert et des légumes" width="400" height="300">
+    <div>
+      <p class="surtitre">Ferme-école</p>
+      <h1>Le marché de la ferme-école</h1>
+      <p class="intro">
+        Préparez votre panier avant le marché du samedi : choisissez vos légumes,
+        gardez vos favoris et validez votre commande.
+      </p>
+    </div>
+  </header>
+
+  <main class="mise-en-page">
+
+    <!-- ===== LES PRODUITS : la liste est construite par le script ===== -->
+    <section aria-labelledby="titre-produits">
+      <h2 id="titre-produits">Les produits de la semaine</h2>
+      <label class="interrupteur">
+        <input type="checkbox" id="filtre-saison">
+        Seulement les produits de saison
+      </label>
+      <ul class="produits" id="liste-produits"></ul>
+    </section>
+
+    <!-- ===== LE PANIER ===== -->
+    <aside class="carte" aria-labelledby="titre-panier">
+      <h2 id="titre-panier">Mon panier <span class="badge" id="nombre-articles">0</span></h2>
+      <p id="panier-vide">Votre panier est vide.</p>
+      <ul class="panier" id="liste-panier"></ul>
+      <p class="total">Total : <strong id="total">0 DH</strong></p>
+      <div class="rangee">
+        <button type="button" class="bouton" id="bouton-valider">Valider la commande</button>
+        <button type="button" class="bouton bouton-clair" id="bouton-vider">Vider le panier</button>
+      </div>
+      <p class="message" id="message-commande" role="status" aria-live="polite"></p>
+    </aside>
+
+    <!-- ===== LES FAVORIS ===== -->
+    <section class="carte favoris" aria-labelledby="titre-favoris">
+      <h2 id="titre-favoris">Mes favoris</h2>
+      <p id="favoris-vide">Aucun favori pour le moment.</p>
+      <ul class="liste-favoris" id="liste-favoris"></ul>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <p>Exercice DFS — Ferme-école, 2026</p>
+  </footer>
+
+</body>
+</html>

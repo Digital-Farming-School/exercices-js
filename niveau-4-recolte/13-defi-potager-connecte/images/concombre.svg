@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Concombre</title>
+  <rect width="400" height="300" fill="#e8f5e9"/>
+  <rect x="68" y="112" width="264" height="72" rx="36" fill="#2e7d32" transform="rotate(12 200 148)"/><path d="M92 160 C160 150 250 160 320 190" stroke="#81c784" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/><g fill="#a5d6a7"><circle cx="140" cy="150" r="4"/><circle cx="190" cy="165" r="4"/><circle cx="240" cy="172" r="4"/><circle cx="285" cy="190" r="4"/><circle cx="110" cy="130" r="4"/></g><rect x="62" y="108" width="16" height="12" rx="4" fill="#1b5e20"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img"><title>Sachet de graines radis</title><rect width="400" height="300" fill="#f8bbd0"/>
+<path d="M110 40 H290 L300 70 V270 H100 V70Z" fill="#fff" stroke="#d81b60" stroke-width="6"/>
+<path d="M110 40 H290 L300 70 H100Z" fill="#d81b60"/>
+<circle cx="200" cy="150" r="48" fill="#d81b60"/>
+<circle cx="200" cy="150" r="30" fill="#f8bbd0"/>
+<path d="M200 175 V135 M200 150 L185 138 M200 158 L216 144" stroke="#d81b60" stroke-width="5" stroke-linecap="round" fill="none"/>
+<rect x="135" y="215" width="130" height="10" rx="5" fill="#d81b60" opacity=".6"/>
+<rect x="155" y="235" width="90" height="8" rx="4" fill="#d81b60" opacity=".35"/></svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Un tas de tomates rouges</title>
+  <rect width="400" height="300" fill="#ffebee"/>
+  <rect y="210" width="400" height="90" fill="#8d6e63"/>
+  <circle cx="120" cy="190" r="32" fill="#e53935"/>
+  <circle cx="180" cy="175" r="32" fill="#e53935"/>
+  <circle cx="240" cy="190" r="32" fill="#e53935"/>
+  <circle cx="300" cy="180" r="32" fill="#e53935"/>
+  <circle cx="150" cy="150" r="32" fill="#e53935"/>
+  <circle cx="210" cy="140" r="32" fill="#e53935"/>
+  <circle cx="270" cy="150" r="32" fill="#e53935"/>
+</svg>

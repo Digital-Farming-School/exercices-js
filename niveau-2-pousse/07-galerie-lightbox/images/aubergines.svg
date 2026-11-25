@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Deux aubergines violettes</title>
+  <rect width="400" height="300" fill="#ede7f6"/>
+  <rect y="210" width="400" height="90" fill="#8d6e63"/>
+  <ellipse cx="150" cy="170" rx="38" ry="70" fill="#5e35b1" transform="rotate(-15 150 170)"/>
+  <path d="M126 100 h48 l-8 18 h-32z" fill="#2e7d32"/>
+  <ellipse cx="260" cy="170" rx="38" ry="70" fill="#5e35b1" transform="rotate(15 260 170)"/>
+  <path d="M236 100 h48 l-8 18 h-32z" fill="#2e7d32"/>
+</svg>

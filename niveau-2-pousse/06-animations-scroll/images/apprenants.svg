@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Trois silhouettes d'apprenants devant un jardin</title>
+  <rect width="400" height="300" fill="#e8f5e9"/>
+  <rect y="210" width="400" height="90" fill="#81c784"/>  <circle cx="110" cy="110" r="28" fill="#8d6e63"/>
+  <path d="M65 230 q45 -110 90 0z" fill="#1976d2"/>
+  <circle cx="200" cy="110" r="28" fill="#a1887f"/>
+  <path d="M155 230 q45 -110 90 0z" fill="#f9a825"/>
+  <circle cx="290" cy="110" r="28" fill="#6d4c41"/>
+  <path d="M245 230 q45 -110 90 0z" fill="#e53935"/>
+</svg>

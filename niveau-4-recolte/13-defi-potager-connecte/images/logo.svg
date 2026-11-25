@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <title>Le potager connecté</title>
+  <circle cx="24" cy="24" r="23" fill="#1b5e20"/>
+  <path d="M14 34 C12 20 22 12 34 12 C36 24 30 34 18 34z" fill="#81c784"/>
+  <path d="M16 32 C20 26 25 21 30 17" stroke="#1b5e20" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M30 38 a8 8 0 0 1 8 -8 M30 43 a13 13 0 0 1 13 -13" stroke="#f9a825" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>

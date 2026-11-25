@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Une couche de paille dorée autour d'un plant de tomate</title>
+  <rect width="400" height="300" fill="#fff8e1"/>
+  <circle cx="60" cy="55" r="30" fill="#f9a825"/>  <rect y="210" width="400" height="90" fill="#6d4c41"/>
+  <ellipse cx="200" cy="222" rx="150" ry="22" fill="#f9a825"/>
+  <path d="M70 222 l-14 -4" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M80 227 l14 -5" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M90 232 l-14 -6" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M100 222 l14 -7" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M110 227 l-14 -4" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M120 232 l14 -5" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M130 222 l-14 -6" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M140 227 l14 -7" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M150 232 l-14 -4" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M160 222 l14 -5" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M170 227 l-14 -6" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M180 232 l14 -7" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M190 222 l-14 -4" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M200 227 l14 -5" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M210 232 l-14 -6" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M220 222 l14 -7" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M230 227 l-14 -4" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M240 232 l14 -5" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M250 222 l-14 -6" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M260 227 l14 -7" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M270 232 l-14 -4" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M280 222 l14 -5" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M290 227 l-14 -6" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M300 232 l14 -7" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M310 222 l-14 -4" stroke="#ffd54f" stroke-width="3"/>
+  <path d="M320 227 l14 -5" stroke="#ffd54f" stroke-width="3"/>
+  <rect x="197" y="133" width="6" height="85" fill="#2e7d32"/>
+  <ellipse cx="186" cy="141" rx="14" ry="7" fill="#388e3c" transform="rotate(-25 186 141)"/>
+  <ellipse cx="214" cy="147" rx="14" ry="7" fill="#388e3c" transform="rotate(25 214 147)"/>
+  <circle cx="190" cy="160" r="9" fill="#e53935"/>  <circle cx="214" cy="172" r="8" fill="#e53935"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Une bêche plantée dans une terre brune ameublie</title>
+  <rect width="400" height="300" fill="#e3f2fd"/>
+  <circle cx="330" cy="60" r="30" fill="#f9a825"/>  <rect y="210" width="400" height="90" fill="#6d4c41"/>  <path d="M30 232 q30 -14 60 0" stroke="#4e342e" stroke-width="6" fill="none"/>
+  <path d="M100 232 q30 -14 60 0" stroke="#4e342e" stroke-width="6" fill="none"/>
+  <path d="M170 232 q30 -14 60 0" stroke="#4e342e" stroke-width="6" fill="none"/>
+  <path d="M240 232 q30 -14 60 0" stroke="#4e342e" stroke-width="6" fill="none"/>
+  <path d="M310 232 q30 -14 60 0" stroke="#4e342e" stroke-width="6" fill="none"/>
+  <rect x="120" y="70" width="10" height="120" rx="4" fill="#a1887f"/>
+  <rect x="108" y="64" width="34" height="10" rx="4" fill="#8d6e63"/>
+  <path d="M104 190 h42 l-8 40 h-26 z" fill="#90a4ae"/>
+</svg>

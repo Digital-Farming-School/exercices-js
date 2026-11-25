@@ -1,0 +1,175 @@
+/* =========================================================
+   Tableau d'affichage de la ferme-école — feuille de style
+   Elle est fournie COMPLÈTE : le sujet de l'exercice est le
+   JavaScript. Vous n'avez pas besoin de la modifier.
+   Les classes utiles au script sont signalées « (JS) ».
+   ========================================================= */
+
+/* ===== VARIABLES ===== */
+:root {
+  --vert: #2e7d32;
+  --vert-fonce: #1b5e20;
+  --vert-clair: #e8f5e9;
+  --soleil: #f9a825;
+  --soleil-clair: #fff3c4;
+  --creme: #fffaf0;
+  --texte: #1f2a1f;
+  --ombre: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  line-height: 1.5;
+  color: var(--texte);
+  background-color: var(--creme);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--vert-fonce);
+}
+
+:focus-visible {
+  outline: 3px solid var(--vert-fonce);
+  outline-offset: 2px;
+}
+
+/* (JS) Un élément qui porte cette classe est masqué */
+.cache {
+  display: none;
+}
+
+/* ===== EN-TÊTE ET PIED DE PAGE ===== */
+.entete {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: var(--vert);
+}
+
+.entete h1 {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.surtitre {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--soleil-clair);
+}
+
+main {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.pied {
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  background-color: var(--vert-clair);
+}
+
+.pied p {
+  margin: 0.25rem 0;
+}
+
+/* ===== BOUTONS ===== */
+.bouton {
+  padding: 0.6rem 1.1rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--texte);
+  background-color: var(--soleil);
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.bouton:hover {
+  background-color: #ffca28;
+}
+
+/* ===== PANNEAUX ===== */
+.intro {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.panneau {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  box-shadow: var(--ombre);
+}
+
+.panneau h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  color: var(--vert-fonce);
+}
+
+.recolte {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 40rem) {
+  .recolte {
+    grid-template-columns: 14rem 1fr;
+  }
+}
+
+.culture {
+  margin: 0;
+  font-weight: 600;
+}
+
+.compteur {
+  margin: 0.25rem 0;
+  font-size: 1.25rem;
+}
+
+.compteur strong {
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--vert);
+}
+
+/* (JS) Message sous le compteur */
+.message {
+  margin: 0.5rem 0 0;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--soleil-clair);
+  border-radius: 0.5rem;
+}
+
+.corvees {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.date-du-jour {
+  margin: 0;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}

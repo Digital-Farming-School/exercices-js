@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+  <title>Rhizome de gingembre</title>
+  <rect width="400" height="300" fill="#e8f5e9"/>
+  <path d="M90 220 C 80 180, 120 160, 150 175 C 170 140, 220 140, 235 175 C 270 160, 320 180, 305 225 C 290 255, 120 255, 90 220 Z" fill="#d7b27a"/>
+  <path d="M130 200 H 180 M210 190 H 275 M150 225 H 240" stroke="#b58a50" stroke-width="5" stroke-linecap="round"/>
+  <path d="M160 170 C 150 120, 160 90, 150 55 C 185 80, 190 125, 160 170 Z" fill="#43a047"/>
+  <path d="M235 172 C 245 125, 260 100, 285 75 C 290 115, 270 150, 235 172 Z" fill="#2e7d32"/>
+</svg>

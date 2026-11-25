@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Courgette</title>
+  <rect width="400" height="300" fill="#e8f5e9"/>
+  <rect x="85" y="118" width="240" height="68" rx="34" fill="#388e3c" transform="rotate(-18 205 152)"/><path d="M110 180 C170 150 250 130 312 112" stroke="#81c784" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/><rect x="302" y="72" width="14" height="30" rx="5" fill="#1b5e20" transform="rotate(-18 309 87)"/><circle cx="96" cy="190" r="14" fill="#f9a825"/><circle cx="96" cy="190" r="6" fill="#ef6c00"/>
+</svg>

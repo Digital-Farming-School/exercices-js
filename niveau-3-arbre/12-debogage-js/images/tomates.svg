@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img"><title>Tomates</title>
+  <rect width="400" height="300" fill="#ffe9e0"/>
+  <circle cx="150" cy="170" r="70" fill="#e53935"/><circle cx="255" cy="185" r="58" fill="#c62828"/>
+  <path d="M118 112 C135 126 165 126 182 112 C170 138 130 138 118 112 Z" fill="#2e7d32"/>
+  <path d="M225 138 C240 150 270 150 285 138 C275 160 235 160 225 138 Z" fill="#2e7d32"/>
+</svg>

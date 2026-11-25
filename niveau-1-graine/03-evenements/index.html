@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche pratique : réussir son paillage — Ferme-école</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body data-taille="0">
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="entete">
+    <p class="surtitre">Fiche pratique n° 4</p>
+    <h1>Réussir son paillage</h1>
+    <p>Couvrir la terre pour garder l'eau et chasser les mauvaises herbes.</p>
+  </header>
+
+  <main>
+
+    <!-- ===== BARRE D'OUTILS : taille du texte et mode lecture ===== -->
+    <div class="outils" role="group" aria-label="Confort de lecture">
+      <button type="button" class="bouton" id="bouton-diminuer" aria-label="Diminuer la taille du texte">A−</button>
+      <button type="button" class="bouton" id="bouton-agrandir" aria-label="Agrandir la taille du texte">A+</button>
+      <span class="espace"></span>
+      <button type="button" class="bouton" id="bouton-lecture" aria-pressed="false">Mode lecture</button>
+    </div>
+
+    <article class="fiche" id="fiche">
+
+      <img src="images/paillage.svg" alt="Jeune plant dont le pied est entouré d'une couche de paille qui couvre la terre" width="400" height="300">
+
+      <h2>À quoi sert le paillage ?</h2>
+      <p>
+        Une couche de matière végétale posée sur le sol garde l'humidité, limite les mauvaises herbes,
+        protège la terre du soleil et de la pluie battante, et nourrit les vers de terre en se décomposant.
+      </p>
+
+      <!-- ===== ÉTAPES : masquées au départ, affichées par le bouton ===== -->
+      <h2>Les étapes</h2>
+      <button type="button" class="bouton" id="bouton-etapes" aria-expanded="false" aria-controls="etapes">Afficher les étapes</button>
+      <ol class="etapes cache" id="etapes">
+        <li>Désherber la planche et arroser abondamment la terre.</li>
+        <li>Étaler le paillage en couche de 5 cm environ.</li>
+        <li>Laisser quelques centimètres libres autour du pied des plants.</li>
+        <li>Renouveler la couche quand elle s'est décomposée.</li>
+      </ol>
+
+      <!-- ===== CALCULATEUR ===== -->
+      <section class="calculateur" aria-labelledby="titre-calcul">
+        <h2 id="titre-calcul">Combien de paillage ?</h2>
+        <label for="surface">Surface de ma planche (en m²) :</label>
+        <input type="number" id="surface" min="0" step="0.5" inputmode="decimal">
+        <p class="resultat" id="resultat-paillage" aria-live="polite">Entrez une surface pour estimer la quantité.</p>
+      </section>
+
+      <!-- ===== MATÉRIAUX ===== -->
+      <h2>Quel matériau choisir ?</h2>
+      <p>Survolez ou sélectionnez un matériau pour lire sa description.</p>
+      <ul class="materiaux">
+        <li><button type="button" class="materiau" data-description="La paille : légère et bon marché, elle se décompose en une saison. Idéale pour les légumes.">Paille</button></li>
+        <li><button type="button" class="materiau" data-description="Les feuilles mortes : gratuites en automne, à laisser un peu s'humidifier avant de les étaler.">Feuilles mortes</button></li>
+        <li><button type="button" class="materiau" data-description="Les copeaux de bois : très durables, parfaits pour les allées et les arbustes, moins pour les légumes.">Copeaux</button></li>
+        <li><button type="button" class="materiau" data-description="La tonte de gazon : à étaler en couche fine et sèche, sinon elle fermente et sent mauvais.">Tonte de gazon</button></li>
+      </ul>
+      <p class="description-materiau" id="description-materiau" aria-live="polite">Aucun matériau sélectionné.</p>
+
+      <!-- ===== QUESTION ===== -->
+      <form class="question" id="formulaire-question" action="/envoyer-question" method="post">
+        <h2>Une question ?</h2>
+        <label for="prenom">Votre prénom :</label>
+        <input type="text" id="prenom" name="prenom" required>
+        <button type="submit" class="bouton">Poser ma question</button>
+        <p class="confirmation" id="confirmation" aria-live="polite"></p>
+      </form>
+
+      <!-- ===== ASTUCE : ne se révèle qu'une seule fois ===== -->
+      <div class="astuce">
+        <button type="button" class="bouton" id="bouton-astuce">Révéler l'astuce du jour</button>
+        <p id="texte-astuce" aria-live="polite"></p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="pied">
+    <p>Exercice DFS — JavaScript, sprint 1</p>
+  </footer>
+
+</body>
+</html>

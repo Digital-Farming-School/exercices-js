@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Piment</title>
+  <rect width="400" height="300" fill="#fff3e0"/>
+  <path d="M125 95 C140 78 180 80 210 112 C255 160 292 200 305 238 C270 232 222 205 172 163 C140 136 118 120 125 95z" fill="#d32f2f"/><path d="M165 100 C200 105 240 150 275 205" stroke="#ef9a9a" stroke-width="6" fill="none" stroke-linecap="round" opacity=".7"/><path d="M125 95 C112 72 100 62 82 62 C92 78 104 92 125 95z" fill="#2e7d32"/>
+</svg>

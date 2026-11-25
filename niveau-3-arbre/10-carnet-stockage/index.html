@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le carnet du jardin — Ferme-école</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header class="entete">
+    <img class="logo" src="images/carnet.svg" alt="Carnet ouvert avec un crayon et une jeune pousse" width="400" height="300">
+    <div>
+      <p class="surtitre">Jardin pédagogique de la ferme-école</p>
+      <h1>Le carnet du jardin</h1>
+      <p class="intro">
+        Notez vos observations et cochez les tâches de la semaine :
+        le carnet se souvient de tout, même si vous fermez la page.
+      </p>
+      <button type="button" class="bouton bouton-clair" id="bouton-theme" aria-pressed="false">
+        Passer en mode sombre
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== LES TÂCHES DE LA SEMAINE : une case à cocher par tâche (data-tache = identifiant) ===== -->
+    <section class="carte" aria-labelledby="titre-taches">
+      <h2 id="titre-taches">Tâches de la semaine</h2>
+      <ul class="taches" id="liste-taches">
+        <li><label><input type="checkbox" data-tache="arroser"> Arroser les planches au goutte à goutte</label></li>
+        <li><label><input type="checkbox" data-tache="desherber"> Désherber entre les rangs de piments</label></li>
+        <li><label><input type="checkbox" data-tache="pailler"> Pailler le pied des tomates</label></li>
+        <li><label><input type="checkbox" data-tache="pincer"> Pincer le bout des tiges de basilic</label></li>
+        <li><label><input type="checkbox" data-tache="noter"> Noter les observations dans le carnet</label></li>
+      </ul>
+      <p>
+        <progress id="progression" max="5" value="0" aria-labelledby="progression-texte"></progress>
+        <span id="progression-texte" aria-live="polite">0 tâche sur 5</span>
+      </p>
+    </section>
+
+    <!-- ===== LE FORMULAIRE : novalidate = c'est le script qui affiche les messages d'erreur ===== -->
+    <section class="carte" aria-labelledby="titre-formulaire">
+      <h2 id="titre-formulaire">Nouvelle observation</h2>
+
+      <form id="formulaire-observation" novalidate>
+
+        <div class="champ">
+          <label for="champ-plante">Plante observée</label>
+          <input type="text" id="champ-plante" name="plante" list="plantes" required minlength="3" maxlength="40" autocomplete="off" aria-describedby="erreur-plante">
+          <datalist id="plantes">
+            <option value="Piment"></option>
+            <option value="Gingembre"></option>
+            <option value="Basilic"></option>
+            <option value="Tomate"></option>
+            <option value="Citronnelle"></option>
+          </datalist>
+          <p class="erreur" id="erreur-plante"></p>
+        </div>
+
+        <div class="champ">
+          <label for="champ-date">Date de l'observation</label>
+          <input type="date" id="champ-date" name="date" required aria-describedby="erreur-date">
+          <p class="erreur" id="erreur-date"></p>
+        </div>
+
+        <div class="champ">
+          <label for="champ-hauteur">Hauteur de la plante (en cm)</label>
+          <input type="number" id="champ-hauteur" name="hauteur" required min="0" max="300" step="0.5" inputmode="decimal" aria-describedby="erreur-hauteur">
+          <p class="erreur" id="erreur-hauteur"></p>
+        </div>
+
+        <div class="champ">
+          <label for="champ-note">Ce que vous avez remarqué</label>
+          <textarea id="champ-note" name="note" rows="3" required minlength="10" maxlength="200" aria-describedby="erreur-note compteur-note"></textarea>
+          <p class="compteur" id="compteur-note">0 / 200</p>
+          <p class="erreur" id="erreur-note"></p>
+        </div>
+
+        <button type="submit" class="bouton">Ajouter au carnet</button>
+        <p id="message-formulaire" class="succes" role="status"></p>
+      </form>
+    </section>
+
+    <!-- ===== LES OBSERVATIONS ENREGISTRÉES ===== -->
+    <section class="carte" aria-labelledby="titre-observations">
+      <h2 id="titre-observations">Mes observations <span class="badge" id="compteur-observations">0</span></h2>
+      <p id="message-vide">Le carnet est vide. Ajoutez votre première observation !</p>
+      <ul class="observations" id="liste-observations"></ul>
+      <button type="button" class="bouton bouton-clair" id="bouton-tout-effacer" disabled>Tout effacer</button>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <p>Exercice DFS — Ferme-école, 2026</p>
+  </footer>
+
+</body>
+</html>

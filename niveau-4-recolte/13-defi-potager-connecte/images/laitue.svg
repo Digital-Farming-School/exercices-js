@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Laitue</title>
+  <rect width="400" height="300" fill="#f1f8e9"/>
+  <ellipse cx="200" cy="185" rx="125" ry="82" fill="#558b2f"/><circle cx="110" cy="165" r="40" fill="#689f38"/><circle cx="290" cy="165" r="40" fill="#689f38"/><ellipse cx="200" cy="170" rx="98" ry="66" fill="#7cb342"/><ellipse cx="200" cy="158" rx="68" ry="48" fill="#9ccc65"/><ellipse cx="200" cy="148" rx="38" ry="28" fill="#c5e1a5"/><path d="M200 120 V200 M160 160 H240" stroke="#aed581" stroke-width="3" opacity=".7"/>
+</svg>

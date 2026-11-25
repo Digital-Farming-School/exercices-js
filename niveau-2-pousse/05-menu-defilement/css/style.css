@@ -1,0 +1,212 @@
+/* =========================================================
+   Le guide de la saison des pluies — feuille de style
+   Le CSS est FOURNI et complet : ne le modifiez pas.
+   Classes que votre JavaScript va ajouter / retirer :
+     .actif      lien du menu de la section visible
+     .ouvert     menu déroulé (téléphone)
+     .cache      élément invisible (bouton « retour en haut »)
+   ========================================================= */
+
+:root {
+  --vert: #2e7d32;
+  --vert-fonce: #1b5e20;
+  --vert-clair: #e8f5e9;
+  --soleil: #f9a825;
+  --creme: #fffaf0;
+  --texte: #1f2a1f;
+  --hauteur-entete: 3.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  line-height: 1.6;
+  color: var(--texte);
+  background-color: var(--creme);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+}
+
+/* ===== OUTIL : texte lisible seulement par les lecteurs d'écran ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ===== EN-TÊTE COLLANT ===== */
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--hauteur-entete);
+  padding: 0 1rem;
+  background-color: var(--vert-fonce);
+  color: #fff;
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.6rem;
+  border: 2px solid #fff;
+  border-radius: 0.4rem;
+  background: none;
+  cursor: pointer;
+}
+
+.burger-barre {
+  width: 1.4rem;
+  height: 3px;
+  background-color: #fff;
+}
+
+.burger:focus-visible,
+.retour-haut:focus-visible,
+.menu a:focus-visible {
+  outline: 3px solid var(--soleil);
+  outline-offset: 2px;
+}
+
+/* Téléphone : le menu est caché tant que .ouvert n'est pas posée */
+.menu {
+  display: none;
+  width: 100%;
+}
+
+.menu.ouvert {
+  display: block;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0 0 0.75rem;
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  border-left: 4px solid transparent;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: var(--vert);
+}
+
+/* Lien de la section visible */
+.menu a.actif {
+  border-left-color: var(--soleil);
+  background-color: var(--vert);
+  font-weight: bold;
+}
+
+/* Ordinateur : menu horizontal, plus de burger */
+@media (min-width: 700px) {
+  .burger {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    width: auto;
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0;
+  }
+
+  .menu a {
+    border-left: 0;
+    border-bottom: 4px solid transparent;
+    padding: 1rem 0.75rem 0.75rem;
+  }
+
+  .menu a.actif {
+    border-bottom-color: var(--soleil);
+  }
+}
+
+/* ===== CONTENU ===== */
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.accueil {
+  padding: 3rem 0 1rem;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+  color: var(--vert-fonce);
+}
+
+.etape {
+  min-height: 80vh;
+  padding: 2rem 0;
+  /* Quand on saute vers #sol, l'en-tête collant ne doit pas cacher le titre */
+  scroll-margin-top: var(--hauteur-entete);
+}
+
+/* ===== PIED DE PAGE ===== */
+.pied {
+  padding: 1.5rem 1rem;
+  background-color: var(--vert-clair);
+  text-align: center;
+}
+
+.pied p {
+  margin: 0.25rem 0;
+}
+
+/* ===== BOUTON « RETOUR EN HAUT » ===== */
+.retour-haut {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--soleil);
+  color: var(--texte);
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cache {
+  display: none;
+}

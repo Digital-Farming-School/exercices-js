@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img"><title>Étal de marché</title>
+  <rect width="400" height="300" fill="#fff8e1"/>
+  <path d="M40 90 H 360 L 340 150 H 60 Z" fill="#43a047"/>
+  <path d="M60 90 L 80 150 M120 90 L 130 150 M180 90 L 180 150 M240 90 L 230 150 M300 90 L 280 150" stroke="#fff" stroke-width="12"/>
+  <rect x="60" y="150" width="280" height="110" fill="#8d6e63"/>
+  <circle cx="110" cy="190" r="26" fill="#e53935"/><circle cx="170" cy="195" r="24" fill="#fb8c00"/>
+  <circle cx="230" cy="192" r="25" fill="#7cb342"/><circle cx="290" cy="196" r="22" fill="#e53935"/>
+</svg>

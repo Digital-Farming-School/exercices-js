@@ -1,0 +1,243 @@
+/* =========================================================
+   Tableau de bord du visiteur — feuille de style
+   Fournie et complète : le sujet de l'exercice est le JavaScript,
+   vous ne modifiez pas ce fichier.
+   ========================================================= */
+
+/* ===== VARIABLES : la charte graphique ===== */
+:root {
+  --vert: #2e7d32;
+  --vert-fonce: #1b5e20;
+  --vert-clair: #e8f5e9;
+  --soleil: #f9a825;
+  --soleil-clair: #fff3c4;
+  --rouge: #b71c1c;
+  --rouge-clair: #fde8e8;
+  --creme: #fffaf0;
+  --carte: #ffffff;
+  --texte: #1f2a1f;
+  --gris: #5b665b;
+  --bordure: #d6e0d6;
+  --ombre: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  line-height: 1.5;
+  color: var(--texte);
+  background-color: var(--creme);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+a {
+  color: var(--vert-fonce);
+}
+
+:focus-visible {
+  outline: 3px solid var(--soleil);
+  outline-offset: 2px;
+}
+
+/* La classe .cache sert à masquer un élément depuis JavaScript */
+.cache {
+  display: none !important;
+}
+
+/* ===== EN-TÊTE ===== */
+.entete {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: var(--vert);
+}
+
+.entete h1 {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.surtitre {
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.intro {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* ===== MISE EN PAGE ===== */
+main {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+main > section {
+  margin-bottom: 2rem;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+.carte {
+  padding: 1rem 1.25rem;
+  background-color: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: 0.75rem;
+  box-shadow: var(--ombre);
+}
+
+.carte h2,
+.carte h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: var(--vert-fonce);
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+
+dd {
+  margin: 0 0 0.6rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* ===== BOUTONS ===== */
+.bouton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--vert);
+  border: 2px solid var(--vert);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.bouton:hover {
+  background-color: var(--vert-fonce);
+}
+
+.bouton-clair {
+  color: var(--vert-fonce);
+  background-color: #fff;
+}
+
+.bouton-clair:hover {
+  background-color: var(--vert-clair);
+}
+
+.bouton[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rangee {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ===== BADGES ===== */
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 1rem;
+  background-color: var(--bordure);
+}
+
+.badge-ok {
+  color: var(--vert-fonce);
+  background-color: var(--vert-clair);
+}
+
+.badge-alerte {
+  color: var(--rouge);
+  background-color: var(--rouge-clair);
+}
+
+.alerte {
+  padding: 0.75rem 1rem;
+  color: #5d3b00;
+  background-color: var(--soleil-clair);
+  border-left: 6px solid var(--soleil);
+  border-radius: 0.25rem;
+}
+
+/* ===== PIED DE PAGE ===== */
+.pied {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: var(--vert-fonce);
+}
+
+.pied p {
+  margin: 0.25rem 0;
+}
+
+.pied a {
+  color: #fff;
+}
+
+/* ===== FICHE PLANTE ===== */
+.plante {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.plante img {
+  width: 12rem;
+  border-radius: 0.5rem;
+}
+
+.plante h3 {
+  margin: 0 0 0.25rem;
+}
+
+/* ===== MINUTEUR ===== */
+.chrono {
+  margin: 0.5rem 0;
+  font-size: 3rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--vert-fonce);
+}
+
+.chrono.termine {
+  color: var(--rouge);
+}

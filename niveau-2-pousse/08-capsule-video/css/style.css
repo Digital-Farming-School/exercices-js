@@ -1,0 +1,193 @@
+/* =========================================================
+   Planter une bouture — feuille de style
+   Le CSS est FOURNI et complet : ne le modifiez pas.
+   ========================================================= */
+
+:root {
+  --vert: #2e7d32;
+  --vert-fonce: #1b5e20;
+  --vert-clair: #e8f5e9;
+  --soleil: #f9a825;
+  --creme: #fffaf0;
+  --texte: #1f2a1f;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  line-height: 1.5;
+  color: var(--texte);
+  background-color: var(--creme);
+}
+
+h1,
+h2 {
+  color: var(--vert-fonce);
+  line-height: 1.2;
+}
+
+.entete {
+  padding: 2rem 1rem 0.5rem;
+  text-align: center;
+}
+
+.entete h1 {
+  margin: 0.25rem 0 0;
+}
+
+.surtitre {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===== LECTEUR ===== */
+.cadre {
+  margin: 1rem 0 0;
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75rem 0.75rem 0 0;
+  background-color: #000;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.commandes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+  background-color: var(--vert-fonce);
+  color: #fff;
+}
+
+.commandes[hidden] {
+  display: none;
+}
+
+.bouton {
+  padding: 0.5rem 0.9rem;
+  border: 0;
+  border-radius: 2rem;
+  background-color: var(--soleil);
+  color: var(--texte);
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bouton[aria-pressed="true"] {
+  background-color: #fff;
+}
+
+.bouton:focus-visible,
+.chapitres button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+.progression {
+  flex: 1 1 12rem;
+  accent-color: var(--soleil);
+}
+
+.volume {
+  width: 6rem;
+  accent-color: var(--soleil);
+}
+
+.temps {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.vitesse {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+select {
+  padding: 0.25rem;
+  font: inherit;
+}
+
+.verdict {
+  min-height: 1.5rem;
+  margin: 0.75rem 0 0;
+  font-weight: bold;
+}
+
+/* Deux états du message de durée, choisis par le JavaScript */
+.verdict.ok {
+  color: var(--vert);
+}
+
+.verdict.alerte {
+  color: #b71c1c;
+}
+
+/* ===== CHAPITRES ===== */
+.chapitres {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chapitres button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--vert);
+  border-radius: 0.6rem;
+  background-color: #fff;
+  color: var(--texte);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.chapitres button:hover {
+  background-color: var(--vert-clair);
+}
+
+.chapitres button.actif {
+  background-color: var(--vert);
+  color: #fff;
+}
+
+.pied {
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+  background-color: var(--vert-clair);
+  text-align: center;
+}

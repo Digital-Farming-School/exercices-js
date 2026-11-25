@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Vue du dessus de parcelles de culture en damier</title>
+  <rect width="400" height="300" fill="#efebe9"/>
+  <rect x="25" y="25" width="52" height="56" rx="6" fill="#558b2f"/>
+  <rect x="83" y="25" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="141" y="25" width="52" height="56" rx="6" fill="#558b2f"/>
+  <rect x="199" y="25" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="257" y="25" width="52" height="56" rx="6" fill="#558b2f"/>
+  <rect x="315" y="25" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="25" y="87" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="83" y="87" width="52" height="56" rx="6" fill="#558b2f"/>
+  <rect x="141" y="87" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="199" y="87" width="52" height="56" rx="6" fill="#558b2f"/>
+  <rect x="257" y="87" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="315" y="87" width="52" height="56" rx="6" fill="#558b2f"/>
+  <rect x="25" y="149" width="52" height="56" rx="6" fill="#558b2f"/>
+  <rect x="83" y="149" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="141" y="149" width="52" height="56" rx="6" fill="#558b2f"/>
+  <rect x="199" y="149" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="257" y="149" width="52" height="56" rx="6" fill="#558b2f"/>
+  <rect x="315" y="149" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="25" y="211" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="83" y="211" width="52" height="56" rx="6" fill="#558b2f"/>
+  <rect x="141" y="211" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="199" y="211" width="52" height="56" rx="6" fill="#558b2f"/>
+  <rect x="257" y="211" width="52" height="56" rx="6" fill="#8bc34a"/>
+  <rect x="315" y="211" width="52" height="56" rx="6" fill="#558b2f"/>
+</svg>

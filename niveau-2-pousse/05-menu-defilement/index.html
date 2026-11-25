@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le guide de la saison des pluies — Ferme-école</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE COLLANT : logo, bouton burger (téléphone) et menu ===== -->
+  <header class="entete" id="haut">
+    <a class="logo" href="#haut">🌱 Saison des pluies</a>
+
+    <!-- Le bouton burger n'est visible que sur petit écran. aria-expanded dit si le menu est ouvert. -->
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <span class="burger-barre" aria-hidden="true"></span>
+      <span class="burger-barre" aria-hidden="true"></span>
+      <span class="burger-barre" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav class="menu" id="menu-principal" aria-label="Étapes de la saison">
+      <ul>
+        <li><a href="#sol">1. Le sol</a></li>
+        <li><a href="#semis">2. Les semis</a></li>
+        <li><a href="#arrosage">3. L'arrosage</a></li>
+        <li><a href="#paillage">4. Le paillage</a></li>
+        <li><a href="#recolte">5. La récolte</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="accueil">
+      <h1>Réussir sa saison des pluies au potager</h1>
+      <p>
+        Cinq gestes simples, dans l'ordre, pour des légumes en bonne santé.
+        Faites défiler la page : le menu en haut vous indique où vous êtes.
+      </p>
+    </section>
+
+    <section class="etape" id="sol">
+      <h2>1. Préparer le sol</h2>
+      <img src="images/sol.svg" alt="Une bêche plantée dans une terre brune ameublie" width="400" height="300">
+      <p>
+        Ameublissez la terre sur 20 à 30 cm avec une bêche ou une houe : les racines
+        s'enfoncent mieux et l'eau de pluie pénètre au lieu de ruisseler.
+        Mélangez du compost mûr deux à trois semaines avant de semer.
+      </p>
+    </section>
+
+    <section class="etape" id="semis">
+      <h2>2. Semer au bon moment</h2>
+      <img src="images/semis.svg" alt="Des graines déposées dans un sillon, avec deux jeunes pousses" width="400" height="300">
+      <p>
+        Semez quand les premières pluies sont bien installées. Règle simple :
+        enterrez la graine à une profondeur de deux à trois fois sa taille.
+        Les toutes petites graines (laitue, tomate) se couvrent à peine.
+      </p>
+    </section>
+
+    <section class="etape" id="arrosage">
+      <h2>3. Arroser sans gaspiller</h2>
+      <img src="images/arrosage.svg" alt="Un arrosoir verse de l'eau sur un jeune plant" width="400" height="300">
+      <p>
+        Même en saison des pluies, il y a des jours secs. Arrosez tôt le matin ou en
+        fin de journée, au pied de la plante : l'eau s'évapore moins et les feuilles
+        restent sèches, ce qui limite les maladies.
+      </p>
+    </section>
+
+    <section class="etape" id="paillage">
+      <h2>4. Pailler pour protéger</h2>
+      <img src="images/paillage.svg" alt="Une couche de paille dorée autour d'un plant de tomate" width="400" height="300">
+      <p>
+        Étalez cinq centimètres de paille ou d'herbes sèches autour des plants.
+        Le paillage garde l'humidité, freine les mauvaises herbes et protège
+        le sol des fortes pluies. Laissez un petit vide autour de la tige.
+      </p>
+    </section>
+
+    <section class="etape" id="recolte">
+      <h2>5. Récolter à maturité</h2>
+      <img src="images/recolte.svg" alt="Un panier rempli de tomates mûres et de piments" width="400" height="300">
+      <p>
+        Cueillez le matin, quand il fait frais, des fruits bien colorés et fermes.
+        Récolter souvent encourage la plante à produire davantage.
+        Ne laissez pas les fruits trop mûrs sur le plant.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <p>Guide rédigé par les apprenants de la ferme-école — Exercice DFS, 2026</p>
+    <p>Largeur de la fenêtre : <strong id="largeur">—</strong> px</p>
+  </footer>
+
+  <!-- ===== BOUTON « RETOUR EN HAUT » : caché au départ (classe cache) ===== -->
+  <button class="retour-haut cache" type="button" aria-label="Retour en haut de la page">↑</button>
+
+</body>
+</html>

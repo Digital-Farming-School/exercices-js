@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Oignon</title>
+  <rect width="400" height="300" fill="#fff3e0"/>
+  <path d="M200 92 C290 130 304 212 252 240 C222 256 178 256 148 240 C96 212 110 130 200 92z" fill="#d9a441"/><path d="M200 92 C160 150 160 210 180 252 M200 92 C240 150 240 210 220 252" stroke="#a8761c" stroke-width="3" fill="none" opacity=".7"/><path d="M200 94 C190 62 184 44 178 24 M200 94 C206 62 216 46 228 30" stroke="#7cb342" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M176 250 l-9 20 M200 254 v22 M224 250 l9 20" stroke="#8d6e63" stroke-width="4" stroke-linecap="round"/>
+</svg>

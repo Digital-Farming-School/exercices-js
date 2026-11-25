@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img">
+  <title>Légume-feuille</title>
+  <rect width="400" height="200" fill="#e8f5e9"/>
+  <path d="M200 175 C120 170 85 110 105 60 C150 70 200 100 200 175 Z" fill="#66bb6a"/>
+  <path d="M200 175 C280 170 315 110 295 60 C250 70 200 100 200 175 Z" fill="#43a047"/>
+  <path d="M200 175 C195 120 200 80 200 40 C225 60 235 110 200 175 Z" fill="#2e7d32"/>
+  <path d="M200 175 V 70" stroke="#c8e6c9" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <title>Des gombos verts alignés</title>
+  <rect width="400" height="300" fill="#f1f8e9"/>
+  <rect y="210" width="400" height="90" fill="#8d6e63"/>
+  <path d="M90 80 q16 70 6 140 q-26 -70 -6 -140z" fill="#7cb342"/>
+  <rect x="84" y="72" width="16" height="14" rx="4" fill="#33691e"/>
+  <path d="M150 80 q16 70 3 140 q-26 -70 -7 -140z" fill="#7cb342"/>
+  <rect x="144" y="72" width="16" height="14" rx="4" fill="#33691e"/>
+  <path d="M210 80 q16 70 0 140 q-26 -70 -8 -140z" fill="#7cb342"/>
+  <rect x="204" y="72" width="16" height="14" rx="4" fill="#33691e"/>
+  <path d="M270 80 q16 70 -3 140 q-26 -70 -9 -140z" fill="#7cb342"/>
+  <rect x="264" y="72" width="16" height="14" rx="4" fill="#33691e"/>
+</svg>

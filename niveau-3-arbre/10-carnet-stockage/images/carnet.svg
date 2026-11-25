@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+  <title>Carnet ouvert</title>
+  <rect width="400" height="300" fill="#e8f5e9"/>
+  <path d="M60 80 H 195 V 245 H 60 Z" fill="#fffdf5" stroke="#8d6e63" stroke-width="6"/>
+  <path d="M205 80 H 340 V 245 H 205 Z" fill="#fffdf5" stroke="#8d6e63" stroke-width="6"/>
+  <path d="M80 110 H 175 M80 135 H 175 M80 160 H 175 M80 185 H 150 M225 110 H 320 M225 135 H 320 M225 160 H 290" stroke="#b0bec5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M265 245 V 200" stroke="#2e7d32" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="248" cy="196" rx="20" ry="11" fill="#43a047" transform="rotate(-30 248 196)"/>
+  <ellipse cx="284" cy="190" rx="20" ry="11" fill="#2e7d32" transform="rotate(30 284 190)"/>
+  <path d="M320 60 L 360 100 L 345 105 L 305 70 Z" fill="#f9a825"/>
+  <path d="M305 70 L 345 105 L 300 118 Z" fill="#fff3c4"/>
+</svg>

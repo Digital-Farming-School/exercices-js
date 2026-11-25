@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau d'affichage — Ferme-école des Trois Collines</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- defer : le navigateur lit d'abord toute la page, puis exécute le script -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="entete">
+    <p class="surtitre">Ferme-école des Trois Collines</p>
+    <h1>Tableau d'affichage</h1>
+    <!-- Le script écrira ici le message d'accueil (TODO 3) -->
+    <p class="intro" id="message-accueil">Le script n'a pas encore écrit son message…</p>
+  </header>
+
+  <main>
+
+    <!-- ===== PROCHAINE RÉCOLTE ===== -->
+    <section class="panneau recolte" aria-labelledby="titre-recolte">
+      <img src="images/mais.svg" alt="Épi de maïs doux jaune entouré de ses feuilles vertes" width="400" height="300">
+      <div>
+        <h2 id="titre-recolte">Prochaine récolte</h2>
+        <p class="culture">Maïs doux — parcelle B</p>
+        <p class="compteur">
+          Dans <strong id="jours-restants">--</strong> <span id="unite-jours">jours</span>
+        </p>
+        <!-- aria-live : un lecteur d'écran annonce le texte quand le script le modifie -->
+        <p class="message" id="message-recolte" aria-live="polite">Calcul en cours…</p>
+      </div>
+    </section>
+
+    <!-- ===== DATE DU JOUR ===== -->
+    <section class="panneau" aria-labelledby="titre-date">
+      <h2 id="titre-date">Aujourd'hui</h2>
+      <p class="date-du-jour" id="date-du-jour">Date inconnue</p>
+    </section>
+
+    <!-- ===== CORVÉES : liste statique, le script n'y touche pas ===== -->
+    <section class="panneau" aria-labelledby="titre-corvees">
+      <h2 id="titre-corvees">Corvées de la semaine</h2>
+      <ul class="corvees">
+        <li>Arroser les planches de salades chaque matin</li>
+        <li>Désherber la parcelle B autour des maïs</li>
+        <li>Ramasser les œufs du poulailler</li>
+        <li>Ranger les outils dans la remise</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <p>Exercice DFS — JavaScript, sprint 1</p>
+  </footer>
+
+</body>
+</html>
